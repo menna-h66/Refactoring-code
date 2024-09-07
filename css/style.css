@@ -1,0 +1,95 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root {
+    --firstColor: #081158; /* for navBar and footer background */
+    --secondColor: #eef0f4; /* for body and aside card background */
+    --thirdColor: #0056b3; /* for container btn background and h5 color and back-to-top btn border and font color*/
+    --fourthColor:#c7cfde;/* for navbar a:hover and back-to-top:hover*/
+    --WhiteColor: #fff;/* for navbar, .navbar-text , navbar a, footer, container btn and hover font color*/
+    --a: #4a83c0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondColor)!important;
+}
+
+/*************************************************************** navBar*************************************************/
+.navbar, .navbar-text, .navbar a, footer{
+    background-color: var(--firstColor);
+    color: var(--WhiteColor) !important;
+}
+.navbar a:hover{
+    transition: 0.5s ;
+    color: var(--fourthColor) !important;
+}
+
+/***************************************************************main cards*************************************************/
+.card img{
+    width: 25%;
+    height: 130px;
+}
+.container .btn{
+    background-color: var(--thirdColor) !important;
+    color: var(--WhiteColor);
+    border: none;
+}
+.container .btn:hover{
+    color: var(--WhiteColor);
+}
+aside .card{
+    background-color: var(--secondColor);
+}
+aside a{
+    color: var(--a);
+}
+ h5{
+    color: var(--thirdColor);
+}
+aside a{
+    text-decoration: none;
+}
+.navbar .container-fluid{
+    width: 85%;
+}
+.card{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.col-md-8 .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+ }
+/*************************************************************** icon back to top*************************************************/
+#back-to-top{
+    right: 20px;
+    bottom: 10px;
+    position:fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid var(--thirdColor);
+    color: var(--thirdColor);
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    transition: 0.5s;
+    display: none;
+}
+#back-to-top:hover{
+    border: 1px solid var(--fourthColor);
+    background-color: var(--fourthColor);
+}
+
+/***************************************************************@media*************************************************/
+
+@media (max-width : 763px) {
+    .card img{
+        width: 100%;
+        height: 25%;
+}
+}
